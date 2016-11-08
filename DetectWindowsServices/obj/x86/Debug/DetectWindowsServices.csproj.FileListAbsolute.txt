@@ -1,0 +1,10 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\bin\Debug\DetectWindowsServices.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\bin\Debug\DetectWindowsServices.CA.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\bin\Debug\DetectWindowsServices.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\obj\x86\Debug\DetectWindowsServices.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\obj\x86\Debug\DetectWindowsServices.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\obj\x86\Debug\DetectWindowsServices.DBSelector.resources
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\obj\x86\Debug\DetectWindowsServices.csproj.GenerateResource.Cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DetectWindowsServices\obj\x86\Debug\DetectWindowsServices.csprojResolveAssemblyReference.cache

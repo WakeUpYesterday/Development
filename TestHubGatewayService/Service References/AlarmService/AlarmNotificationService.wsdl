@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="AlarmNotificationServiceNamespace" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:i1="DeviceNotificationServiceNamespace" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:i2="CardMonitoringNotificationServiceNamespace" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AlarmNotificationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetNamedPipeBinding_AlarmNotificationService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetNamedPipeBinding_DeviceNotificationService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetNamedPipeBinding_CardMonitoringNotificationService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="AlarmNotificationServiceNamespace" location="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?wsdl=wsdl0" />
+  <wsdl:import namespace="DeviceNotificationServiceNamespace" location="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?wsdl=wsdl1" />
+  <wsdl:import namespace="CardMonitoringNotificationServiceNamespace" location="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?wsdl=wsdl2" />
+  <wsdl:types />
+  <wsdl:binding name="NetNamedPipeBinding_AlarmNotificationService" type="i0:AlarmNotificationService">
+    <wsp:PolicyReference URI="#NetNamedPipeBinding_AlarmNotificationService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="PublishAlarmOccurred">
+      <soap12:operation soapAction="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmOccurred" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishAlarmCleared">
+      <soap12:operation soapAction="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmCleared" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishAlarmUpdated">
+      <soap12:operation soapAction="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmUpdated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetNamedPipeBinding_DeviceNotificationService" type="i1:DeviceNotificationService">
+    <wsp:PolicyReference URI="#NetNamedPipeBinding_DeviceNotificationService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="NodeAlarmStatusChanged">
+      <soap12:operation soapAction="DeviceNotificationServiceNamespace/DeviceNotificationService/NodeAlarmStatusChanged" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShelterAlarmStatusChanged">
+      <soap12:operation soapAction="DeviceNotificationServiceNamespace/DeviceNotificationService/ShelterAlarmStatusChanged" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeviceAlarmStatusChanged">
+      <soap12:operation soapAction="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceAlarmStatusChanged" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeviceConnectionStatusChanged">
+      <soap12:operation soapAction="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceConnectionStatusChanged" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeviceEnabilityStatusChanged">
+      <soap12:operation soapAction="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceEnabilityStatusChanged" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetNamedPipeBinding_CardMonitoringNotificationService" type="i2:CardMonitoringNotificationService">
+    <wsp:PolicyReference URI="#NetNamedPipeBinding_CardMonitoringNotificationService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="PublishPhysicalLayerDown">
+      <soap12:operation soapAction="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPhysicalLayerDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishPhysicalLayerUp">
+      <soap12:operation soapAction="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPhysicalLayerUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishLinkLayerDown">
+      <soap12:operation soapAction="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishLinkLayerDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishLinkLayerUp">
+      <soap12:operation soapAction="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishLinkLayerUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishPvcDown">
+      <soap12:operation soapAction="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPvcDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishPvcUp">
+      <soap12:operation soapAction="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPvcUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AlarmNotificationService">
+    <wsdl:port name="NetNamedPipeBinding_AlarmNotificationService" binding="tns:NetNamedPipeBinding_AlarmNotificationService">
+      <soap12:address location="net.pipe://serhat.simsoft.com.tr/Siskon.HubGatewayService/AlarmNotificationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://serhat.simsoft.com.tr/Siskon.HubGatewayService/AlarmNotificationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/Serhat.simsoft.com.tr</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetNamedPipeBinding_DeviceNotificationService" binding="tns:NetNamedPipeBinding_DeviceNotificationService">
+      <soap12:address location="net.pipe://serhat.simsoft.com.tr/Siskon.HubGatewayService/AlarmNotificationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://serhat.simsoft.com.tr/Siskon.HubGatewayService/AlarmNotificationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/Serhat.simsoft.com.tr</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetNamedPipeBinding_CardMonitoringNotificationService" binding="tns:NetNamedPipeBinding_CardMonitoringNotificationService">
+      <soap12:address location="net.pipe://serhat.simsoft.com.tr/Siskon.HubGatewayService/AlarmNotificationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://serhat.simsoft.com.tr/Siskon.HubGatewayService/AlarmNotificationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/Serhat.simsoft.com.tr</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

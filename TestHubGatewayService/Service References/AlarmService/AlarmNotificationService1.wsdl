@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="CardMonitoringNotificationServiceNamespace" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="CardMonitoringNotificationServiceNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="CardMonitoringNotificationServiceNamespace/Imports">
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd5" namespace="CardMonitoringNotificationServiceNamespace" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd0" namespace="AlarmNotificationServiceNamespace" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Siskon.Alarm.Domain.Model.HubInterfaces.DTO" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd3" namespace="DeviceNotificationServiceNamespace" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Siskon.Device.Domain.Model.HubInterfaces.DTO" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.DTO.SystemSwitches" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPhysicalLayerDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPhysicalLayerDown" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPhysicalLayerDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPhysicalLayerDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPhysicalLayerUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPhysicalLayerUp" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPhysicalLayerUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPhysicalLayerUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishLinkLayerDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishLinkLayerDown" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishLinkLayerDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishLinkLayerDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishLinkLayerUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishLinkLayerUp" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishLinkLayerUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishLinkLayerUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPvcDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPvcDown" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPvcDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPvcDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPvcUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPvcUp" />
+  </wsdl:message>
+  <wsdl:message name="CardMonitoringNotificationService_PublishPvcUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishPvcUpResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CardMonitoringNotificationService">
+    <wsdl:operation name="PublishPhysicalLayerDown">
+      <wsdl:input wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPhysicalLayerDown" message="tns:CardMonitoringNotificationService_PublishPhysicalLayerDown_InputMessage" />
+      <wsdl:output wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPhysicalLayerDownResponse" message="tns:CardMonitoringNotificationService_PublishPhysicalLayerDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishPhysicalLayerUp">
+      <wsdl:input wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPhysicalLayerUp" message="tns:CardMonitoringNotificationService_PublishPhysicalLayerUp_InputMessage" />
+      <wsdl:output wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPhysicalLayerUpResponse" message="tns:CardMonitoringNotificationService_PublishPhysicalLayerUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishLinkLayerDown">
+      <wsdl:input wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishLinkLayerDown" message="tns:CardMonitoringNotificationService_PublishLinkLayerDown_InputMessage" />
+      <wsdl:output wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishLinkLayerDownResponse" message="tns:CardMonitoringNotificationService_PublishLinkLayerDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishLinkLayerUp">
+      <wsdl:input wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishLinkLayerUp" message="tns:CardMonitoringNotificationService_PublishLinkLayerUp_InputMessage" />
+      <wsdl:output wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishLinkLayerUpResponse" message="tns:CardMonitoringNotificationService_PublishLinkLayerUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishPvcDown">
+      <wsdl:input wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPvcDown" message="tns:CardMonitoringNotificationService_PublishPvcDown_InputMessage" />
+      <wsdl:output wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPvcDownResponse" message="tns:CardMonitoringNotificationService_PublishPvcDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishPvcUp">
+      <wsdl:input wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPvcUp" message="tns:CardMonitoringNotificationService_PublishPvcUp_InputMessage" />
+      <wsdl:output wsaw:Action="CardMonitoringNotificationServiceNamespace/CardMonitoringNotificationService/PublishPvcUpResponse" message="tns:CardMonitoringNotificationService_PublishPvcUp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

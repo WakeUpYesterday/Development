@@ -1,0 +1,7 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\RegistrationInfoCustomAction\bin\Debug\RegistrationInfoCustomAction.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\RegistrationInfoCustomAction\bin\Debug\RegistrationInfoCustomAction.CA.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\RegistrationInfoCustomAction\bin\Debug\RegistrationInfoCustomAction.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\RegistrationInfoCustomAction\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\RegistrationInfoCustomAction\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\RegistrationInfoCustomAction\obj\x86\Debug\RegistrationInfoCustomAction.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\RegistrationInfoCustomAction\obj\x86\Debug\RegistrationInfoCustomAction.pdb

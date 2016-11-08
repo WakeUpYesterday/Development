@@ -1,0 +1,6 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Audio\bin\Debug\Audio.exe.config
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Audio\bin\Debug\Audio.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Audio\bin\Debug\Audio.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Audio\obj\Debug\Audio.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Audio\obj\Debug\Audio.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Audio\obj\Debug\Audio.pdb

@@ -1,0 +1,17 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\DatabaseCustomAction.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\DatabaseCustomAction.CA.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\DatabaseCustomAction.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\obj\x86\Debug\DatabaseCustomAction.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\obj\x86\Debug\DatabaseCustomAction.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\DatabaseCustomAction.dll.config
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\EntityFramework.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\bin\Debug\EntityFramework.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DatabaseCustomAction\obj\x86\Debug\DatabaseCustomAction.csprojResolveAssemblyReference.cache

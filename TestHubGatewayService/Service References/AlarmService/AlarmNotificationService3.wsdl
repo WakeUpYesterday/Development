@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="DeviceNotificationServiceNamespace" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="DeviceNotificationServiceNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="DeviceNotificationServiceNamespace/Imports">
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd3" namespace="DeviceNotificationServiceNamespace" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd0" namespace="AlarmNotificationServiceNamespace" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Siskon.Alarm.Domain.Model.HubInterfaces.DTO" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Siskon.Device.Domain.Model.HubInterfaces.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DeviceNotificationService_NodeAlarmStatusChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:NodeAlarmStatusChanged" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_NodeAlarmStatusChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NodeAlarmStatusChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_ShelterAlarmStatusChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShelterAlarmStatusChanged" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_ShelterAlarmStatusChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShelterAlarmStatusChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_DeviceAlarmStatusChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceAlarmStatusChanged" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_DeviceAlarmStatusChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceAlarmStatusChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_DeviceConnectionStatusChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceConnectionStatusChanged" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_DeviceConnectionStatusChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceConnectionStatusChangedResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_DeviceEnabilityStatusChanged_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceEnabilityStatusChanged" />
+  </wsdl:message>
+  <wsdl:message name="DeviceNotificationService_DeviceEnabilityStatusChanged_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceEnabilityStatusChangedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DeviceNotificationService">
+    <wsdl:operation name="NodeAlarmStatusChanged">
+      <wsdl:input wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/NodeAlarmStatusChanged" message="tns:DeviceNotificationService_NodeAlarmStatusChanged_InputMessage" />
+      <wsdl:output wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/NodeAlarmStatusChangedResponse" message="tns:DeviceNotificationService_NodeAlarmStatusChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShelterAlarmStatusChanged">
+      <wsdl:input wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/ShelterAlarmStatusChanged" message="tns:DeviceNotificationService_ShelterAlarmStatusChanged_InputMessage" />
+      <wsdl:output wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/ShelterAlarmStatusChangedResponse" message="tns:DeviceNotificationService_ShelterAlarmStatusChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeviceAlarmStatusChanged">
+      <wsdl:input wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceAlarmStatusChanged" message="tns:DeviceNotificationService_DeviceAlarmStatusChanged_InputMessage" />
+      <wsdl:output wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceAlarmStatusChangedResponse" message="tns:DeviceNotificationService_DeviceAlarmStatusChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeviceConnectionStatusChanged">
+      <wsdl:input wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceConnectionStatusChanged" message="tns:DeviceNotificationService_DeviceConnectionStatusChanged_InputMessage" />
+      <wsdl:output wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceConnectionStatusChangedResponse" message="tns:DeviceNotificationService_DeviceConnectionStatusChanged_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeviceEnabilityStatusChanged">
+      <wsdl:input wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceEnabilityStatusChanged" message="tns:DeviceNotificationService_DeviceEnabilityStatusChanged_InputMessage" />
+      <wsdl:output wsaw:Action="DeviceNotificationServiceNamespace/DeviceNotificationService/DeviceEnabilityStatusChangedResponse" message="tns:DeviceNotificationService_DeviceEnabilityStatusChanged_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

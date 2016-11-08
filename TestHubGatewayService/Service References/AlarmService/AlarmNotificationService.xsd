@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.DTO.SystemSwitches" />
+  <xs:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="PhysicalLayerEventDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ElementId" type="xs:int" />
+      <xs:element minOccurs="0" name="PortNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="SlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalLayerEventDto" nillable="true" type="tns:PhysicalLayerEventDto" />
+  <xs:complexType name="LinkLayerEventDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ElementId" type="xs:int" />
+      <xs:element minOccurs="0" name="PortNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="SlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinkLayerEventDto" nillable="true" type="tns:LinkLayerEventDto" />
+  <xs:complexType name="PvcEventDto">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.DTO.SystemSwitches" minOccurs="0" name="DestinationSwitch" nillable="true" type="q1:SwitchSystemInformation" />
+      <xs:element minOccurs="0" name="ElementId" type="xs:int" />
+      <xs:element minOccurs="0" name="PortNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PvcType" type="tns:PvcType" />
+      <xs:element minOccurs="0" name="SlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Time" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PvcEventDto" nillable="true" type="tns:PvcEventDto" />
+  <xs:simpleType name="PvcType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rt">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NRt">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ip">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PvcType" nillable="true" type="tns:PvcType" />
+</xs:schema>

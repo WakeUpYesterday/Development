@@ -1,0 +1,22 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\SQLite Test.exe.config
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\SQLite Test.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\SQLite Test.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\EntityFramework.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\SQLite.Designer.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\System.Data.SQLite.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\EnvDTE.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\stdole.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\Microsoft.MSXML.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\EntityFramework.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\SQLite.Designer.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\bin\Debug\System.Data.SQLite.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\obj\Debug\SQLite Test.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\obj\Debug\SQLite Test.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\SQLite Test\obj\Debug\SQLite Test.pdb

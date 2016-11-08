@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>dc4d9633-6d3e-4f94-87d2-e422bc5c8ff4</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Installer</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug;</DefineConstants>
+    <SuppressIces>ICE20;ICE30</SuppressIces>
+    <Cultures>en-US;tr-TR</Cultures>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <!--<PropertyGroup>
+    <OutputDirectory>%(ProjectReference.RootDir)%(ProjectReference.Directory)obj\$(Configuration)\Package\PackageTmp\SSS</OutputDirectory>
+  </PropertyGroup>
+
+  <Target Name="CreateDirectories">
+    <MakeDir
+        Directories="$(OutputDirectory)"/>
+  </Target>-->
+  <ItemGroup>
+    <Compile Include="AppConfigDlg.wxs" />
+    <Compile Include="EndDialog.wxs" />
+    <Compile Include="IISConfiguration.wxs" />
+    <Compile Include="MyWebUI.wxs" />
+    <Compile Include="Product.wxs" />
+    <Compile Include="ResumeDlg.wxs" />
+    <Compile Include="UIDialogs.wxs" />
+    <Compile Include="VerifyReadyDlg.wxs" />
+    <Compile Include="WebApplication.wxs" />
+    <Compile Include="WelcomeDlg.wxs" />
+    <Compile Include="WixUI_Minimal.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApplication\WebApplication.csproj">
+      <Name>WebApplication</Name>
+      <Project>{1d111702-c606-4bc0-887c-af8ddf73556d}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>
+        True
+      </DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLLOCATION</RefTargetDir>
+      <WebProject>True</WebProject>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixSqlExtension">
+      <HintPath>$(WixExtDir)\WixSqlExtension.dll</HintPath>
+      <Name>WixSqlExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixIIsExtension">
+      <HintPath>$(WixExtDir)\WixIIsExtension.dll</HintPath>
+      <Name>WixIIsExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Binary" />
+    <Folder Include="images" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Binary\Banner.bmp" />
+    <Content Include="Binary\Complete.ico" />
+    <Content Include="Binary\Custom.ico" />
+    <Content Include="Binary\Dialog.bmp" />
+    <Content Include="Binary\dlgbmp.bmp" />
+    <Content Include="Binary\Exclam.ico" />
+    <Content Include="Binary\Info.ico" />
+    <Content Include="Binary\License.rtf" />
+    <Content Include="Binary\New.ico" />
+    <Content Include="Binary\Remove.ico" />
+    <Content Include="Binary\Repair.ico" />
+    <Content Include="Binary\Typical.ico" />
+    <Content Include="Binary\Up.ico" />
+    <Content Include="images\bg.bmp" />
+    <Content Include="images\button.png" />
+    <Content Include="images\cancelbtn.bmp" />
+    <Content Include="images\Exclam.ico" />
+    <Content Include="images\header.bmp" />
+    <Content Include="images\installbtn.bmp" />
+    <Content Include="images\proceedbtn.bmp" />
+    <Content Include="images\progressbar.bmp" />
+    <Content Include="images\test.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="en-US.wxl" />
+    <EmbeddedResource Include="tr-TR.wxl" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <Target Name="BeforeBuild">
+    <MSBuild Projects="%(ProjectReference.FullPath)" Targets="Package" Properties="Configuration=$(Configuration);Platform=AnyCPU" Condition="'%(ProjectReference.WebProject)'=='True'" />
+    <ItemGroup>
+      <LinkerBindInputPaths Include="%(ProjectReference.RootDir)%(ProjectReference.Directory)obj\$(Configuration)\Package\PackageTmp\" />
+    </ItemGroup>
+    <!--<ItemGroup>
+      <_CopyItems Include="%(ProjectReference.RootDir)%(ProjectReference.Directory)obj\$(Configuration)\Package\PackageTmp\*.*" />
+    </ItemGroup>
+    <Copy  SourceFiles="@(_CopyItems)" DestinationFolder="%(ProjectReference.RootDir)%(ProjectReference.Directory)obj\$(Configuration)\Package\PackageTmp\GeneralFiles" />-->
+    <HeatDirectory OutputFile="%(ProjectReference.Filename).wxs" Directory="%(ProjectReference.RootDir)%(ProjectReference.Directory)obj\$(Configuration)\Package\PackageTmp\" DirectoryRefId="INSTALLLOCATION" ComponentGroupName="%(ProjectReference.Filename)_Project" AutogenerateGuids="true" SuppressCom="true" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" ToolPath="$(WixToolPath)" Condition="'%(ProjectReference.WebProject)'=='True'" />
+  </Target>
+  <Target Name="AfterBuild">
+    <Exec Command="Explorer.exe $(TargetDir)" IgnoreExitCode="true" ContinueOnError="true">
+    </Exec>
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+</Project>

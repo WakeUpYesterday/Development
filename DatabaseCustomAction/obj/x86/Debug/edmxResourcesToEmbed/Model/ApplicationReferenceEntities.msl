@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DeviceModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="ApplicationRef">
+      <EntityTypeMapping TypeName="DeviceModel.ApplicationRef">
+        <MappingFragment StoreEntitySet="ApplicationRef">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicationOrDeviceType" ColumnName="ApplicationOrDeviceType" />
+          <ScalarProperty Name="ApplicationRootName" ColumnName="ApplicationRootName" />
+          <ScalarProperty Name="ApplicationInitPage" ColumnName="ApplicationInitPage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

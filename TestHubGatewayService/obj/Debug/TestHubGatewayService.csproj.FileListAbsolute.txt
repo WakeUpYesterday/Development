@@ -1,0 +1,6 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\TestHubGatewayService\bin\Debug\TestHubGatewayService.exe.config
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\TestHubGatewayService\bin\Debug\TestHubGatewayService.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\TestHubGatewayService\bin\Debug\TestHubGatewayService.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\TestHubGatewayService\obj\Debug\TestHubGatewayService.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\TestHubGatewayService\obj\Debug\TestHubGatewayService.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\TestHubGatewayService\obj\Debug\TestHubGatewayService.pdb

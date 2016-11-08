@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <UI Id="EndDialogUI2">
+      <DialogRef Id="ProgressDialog"/>
+      <Dialog Id="EndDialog" Width="400" Height="200" Title="Siskon" >    
+        <Control Id="cancelButtonEnd" Type="PushButton" Text="Iptal" Height="35" Width="100" X="295" Y="160" Cancel="yes" >
+          <Publish Event="EndDialog" Value="Exit" />
+        </Control>
+      </Dialog>
+
+    </UI>
+
+    <InstallUISequence>
+      <Show Dialog="EndDialog" After="ProgressDialog" />
+    </InstallUISequence>
+  </Fragment>
+</Wix>

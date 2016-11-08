@@ -1,0 +1,21 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Installer\bin\Debug\tr-TR\Installer.msi
+obj\Debug\AppConfigDlg.wixobj
+obj\Debug\EndDialog.wixobj
+obj\Debug\IISConfiguration.wixobj
+obj\Debug\Product.wixobj
+obj\Debug\ResumeDlg.wixobj
+obj\Debug\VerifyReadyDlg.wixobj
+obj\Debug\WebApplication.wixobj
+obj\Debug\WelcomeDlg.wixobj
+obj\Debug\WixUI_Minimal.wixobj
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Installer\bin\Debug\en-US\Installer.msi
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Installer\bin\Debug\en-US\Installer.wixpdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Installer\bin\Debug\tr-TR\Installer.wixpdb
+obj\Debug\Installer.wixproj.BindContentsFileListen-US.txt
+obj\Debug\Installer.wixproj.BindOutputsFileListen-US.txt
+obj\Debug\Installer.wixproj.BindBuiltOutputsFileListen-US.txt
+obj\Debug\Installer.wixproj.BindContentsFileListtr-TR.txt
+obj\Debug\Installer.wixproj.BindOutputsFileListtr-TR.txt
+obj\Debug\Installer.wixproj.BindBuiltOutputsFileListtr-TR.txt
+obj\Debug\MyWebUI.wixobj
+obj\Debug\UIDialogs.wixobj

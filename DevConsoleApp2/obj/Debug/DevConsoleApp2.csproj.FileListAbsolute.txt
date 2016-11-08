@@ -1,0 +1,16 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\DevConsoleApp2.exe.config
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\DevConsoleApp2.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\DevConsoleApp2.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\obj\Debug\DevConsoleApp2.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\obj\Debug\DevConsoleApp2.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\obj\Debug\DevConsoleApp2.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\EntityFramework.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\EntityFramework.xml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp2\bin\Debug\EntityFramework.SqlServer.xml

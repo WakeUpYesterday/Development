@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Siskon.Device.Domain.Model.HubInterfaces.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Siskon.Device.Domain.Model.HubInterfaces.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="NodeAlarmStatusDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlarmStatus" type="tns:AlarmStatus" />
+      <xs:element minOccurs="0" name="NodeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeElementId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NodeAlarmStatusDto" nillable="true" type="tns:NodeAlarmStatusDto" />
+  <xs:simpleType name="AlarmStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Critic">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Major">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Minor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Warning">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Clean">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AlarmStatus" nillable="true" type="tns:AlarmStatus" />
+  <xs:complexType name="ShelterAlarmStatusDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlarmStatus" type="tns:AlarmStatus" />
+      <xs:element minOccurs="0" name="NodeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="ShelterDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShelterElementId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShelterAlarmStatusDto" nillable="true" type="tns:ShelterAlarmStatusDto" />
+  <xs:complexType name="DeviceAlarmStatusDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlarmStatus" type="tns:AlarmStatus" />
+      <xs:element minOccurs="0" name="DeviceDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceElementId" type="xs:int" />
+      <xs:element minOccurs="0" name="NodeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="ShelterDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceAlarmStatusDto" nillable="true" type="tns:DeviceAlarmStatusDto" />
+  <xs:complexType name="DeviceConnectionStatusDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlarmStatus" type="tns:AlarmStatus" />
+      <xs:element minOccurs="0" name="ConnectionStatus" type="tns:ConnectionStatus" />
+      <xs:element minOccurs="0" name="DeviceDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElementId" type="xs:int" />
+      <xs:element minOccurs="0" name="NodeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="ShelterDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceConnectionStatusDto" nillable="true" type="tns:DeviceConnectionStatusDto" />
+  <xs:simpleType name="ConnectionStatus">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedByte" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Connected" />
+      <xs:enumeration value="Disconnected" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ConnectionStatus" nillable="true" type="tns:ConnectionStatus" />
+  <xs:complexType name="DeviceEnabilityStatusDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlarmStatus" type="tns:AlarmStatus" />
+      <xs:element minOccurs="0" name="ConnectionStatus" type="tns:ConnectionStatus" />
+      <xs:element minOccurs="0" name="DeviceDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElementId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDeviceEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NodeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodeId" type="xs:int" />
+      <xs:element minOccurs="0" name="ShelterDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceEnabilityStatusDto" nillable="true" type="tns:DeviceEnabilityStatusDto" />
+</xs:schema>

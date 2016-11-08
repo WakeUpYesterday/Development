@@ -1,0 +1,2 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Installer\bin\Debug\tr-TR\Installer.msi
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\Installer\bin\Debug\tr-TR\Installer.wixpdb

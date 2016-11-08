@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="GpsData">
+      <EntityTypeMapping TypeName="Model.GpsData">
+        <MappingFragment StoreEntitySet="GpsData">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HumanTimestamp" ColumnName="HumanTimestamp" />
+          <ScalarProperty Name="UnixTime" ColumnName="UnixTime" />
+          <ScalarProperty Name="Microseconds" ColumnName="Microseconds" />
+          <ScalarProperty Name="SystemFailure" ColumnName="SystemFailure" />
+          <ScalarProperty Name="AccelerometerFailure" ColumnName="AccelerometerFailure" />
+          <ScalarProperty Name="GyroscopeFailure" ColumnName="GyroscopeFailure" />
+          <ScalarProperty Name="MagnetometerFailure" ColumnName="MagnetometerFailure" />
+          <ScalarProperty Name="PressureFailure" ColumnName="PressureFailure" />
+          <ScalarProperty Name="GNSSFailure" ColumnName="GNSSFailure" />
+          <ScalarProperty Name="AccelerometerOverrange" ColumnName="AccelerometerOverrange" />
+          <ScalarProperty Name="GyroscopeOverrange" ColumnName="GyroscopeOverrange" />
+          <ScalarProperty Name="MagnetometerOverrange" ColumnName="MagnetometerOverrange" />
+          <ScalarProperty Name="PressureOverrange" ColumnName="PressureOverrange" />
+          <ScalarProperty Name="MinimumTemperature" ColumnName="MinimumTemperature" />
+          <ScalarProperty Name="MaximumTemperature" ColumnName="MaximumTemperature" />
+          <ScalarProperty Name="LowVoltage" ColumnName="LowVoltage" />
+          <ScalarProperty Name="HighVoltage" ColumnName="HighVoltage" />
+          <ScalarProperty Name="GNSSAntennaDisconnected" ColumnName="GNSSAntennaDisconnected" />
+          <ScalarProperty Name="DataOverflow" ColumnName="DataOverflow" />
+          <ScalarProperty Name="OrientationReady" ColumnName="OrientationReady" />
+          <ScalarProperty Name="NavigationReady" ColumnName="NavigationReady" />
+          <ScalarProperty Name="HeadingReady" ColumnName="HeadingReady" />
+          <ScalarProperty Name="TimeReady" ColumnName="TimeReady" />
+          <ScalarProperty Name="GNSSFixType" ColumnName="GNSSFixType" />
+          <ScalarProperty Name="Event1Flag" ColumnName="Event1Flag" />
+          <ScalarProperty Name="Event2Flag" ColumnName="Event2Flag" />
+          <ScalarProperty Name="InternalGNSSEnabled" ColumnName="InternalGNSSEnabled" />
+          <ScalarProperty Name="DualAntennaHeadingActive" ColumnName="DualAntennaHeadingActive" />
+          <ScalarProperty Name="VelocityHeadingEnabled" ColumnName="VelocityHeadingEnabled" />
+          <ScalarProperty Name="AtmosphericAltitudeEnabled" ColumnName="AtmosphericAltitudeEnabled" />
+          <ScalarProperty Name="ExternalPositionActive" ColumnName="ExternalPositionActive" />
+          <ScalarProperty Name="ExternalVelocityActive" ColumnName="ExternalVelocityActive" />
+          <ScalarProperty Name="ExternalHeadingActive" ColumnName="ExternalHeadingActive" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="VelocityNorth" ColumnName="VelocityNorth" />
+          <ScalarProperty Name="VelocityEast" ColumnName="VelocityEast" />
+          <ScalarProperty Name="VelocityDown" ColumnName="VelocityDown" />
+          <ScalarProperty Name="AccelerationX" ColumnName="AccelerationX" />
+          <ScalarProperty Name="AccelerationY" ColumnName="AccelerationY" />
+          <ScalarProperty Name="AccelerationZ" ColumnName="AccelerationZ" />
+          <ScalarProperty Name="GForce" ColumnName="GForce" />
+          <ScalarProperty Name="Roll" ColumnName="Roll" />
+          <ScalarProperty Name="Pitch" ColumnName="Pitch" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="AngularVelocityX" ColumnName="AngularVelocityX" />
+          <ScalarProperty Name="AngularVelocityY" ColumnName="AngularVelocityY" />
+          <ScalarProperty Name="AngularVelocityZ" ColumnName="AngularVelocityZ" />
+          <ScalarProperty Name="LatitudeError" ColumnName="LatitudeError" />
+          <ScalarProperty Name="LongitudeError" ColumnName="LongitudeError" />
+          <ScalarProperty Name="HeightError" ColumnName="HeightError" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

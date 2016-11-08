@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+      xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension"
+      xmlns:ui="http://schemas.microsoft.com/wix/UIExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:sql="http://schemas.microsoft.com/wix/SqlExtension"
+>
+  <!--Id="{D16E42B5-3C6F-4EE5-B2F4-7224F3B74A92}"-->
+  <Product Id="{D16E42B5-3C6F-4EE5-B2F4-7224F3B74A92}"  Name="Installer" Language="1033" Version="1.0.0.0" Manufacturer="Simsoft" UpgradeCode="875595ff-a781-4c5c-a55c-976819e213c7">
+
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Binary Id="success_bmp" SourceFile="C:/Temp/success.bmp" />
+    <Binary Id="error_bmp" SourceFile="C:/Temp/error.bmp" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed."  AllowSameVersionUpgrades="no" AllowDowngrades="no" />
+
+    <MediaTemplate EmbedCab="yes" />
+
+
+    <Feature Id="ProductFeature" Title="Installer" Level="1" ConfigurableDirectory="INSTALLLOCATION">
+
+      <ComponentRef Id='SqlComponent.IntegratedAuthentication' />
+      <ComponentRef Id='SqlComponent.SQLAuthentication' />
+      <ComponentGroupRef Id="IISConfiguration" />
+      <ComponentGroupRef Id="WebApplication_Project" />
+    </Feature>
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLLOCATION" />
+
+    <Binary Id="SqlScriptSQLAuthentication"  SourceFile="c:\Temp\MyDb.sql" />
+    <Binary Id="SqlScriptIntegratedAuthentication"  SourceFile="c:\Temp\MyDb.sql" />
+
+    <!-- .NET Framework 3.0 SP 1 must be installed -->
+    <Property Id="FRAMEWORKBASEPATH">
+      <RegistrySearch Id="FindFrameworkDir" Root="HKLM" Key="SOFTWARE\Microsoft\.NETFramework" Name="InstallRoot" Type="raw"/>
+    </Property>
+    <UI>
+      <UIRef Id="MyWebUI" />
+    </UI>
+    <util:User Id="SQLUser" Name="[DATABASE_USERNAME]" Password="[DATABASE_PASSWORD]" />
+
+    <Property Id='CONNECTION_STRING'></Property>
+    <Property Id='DATABASE_USERNAME'></Property>
+    <Property Id='DATABASE_PASSWORD'></Property>
+    <Property Id='DATABASE_NAME'></Property>
+    <Property Id="DATABASE_SERVER">LOCALHOST</Property>
+    <Property Id="DATABASE_LOGON_TYPE">DatabaseIntegratedAuth</Property>
+    <Property Id="USEINTEGRATEDSECURITY" Secure="yes"></Property>
+
+
+
+    <Property Id="LOCALIZATION" Value="!(loc.Localization)"> </Property>
+    <!--<Property Id="BROWSER" Value="C:\Program Files (x86)\Internet Explorer\iexplore.exe"/>-->
+
+    <!--<CustomAction Id='LaunchBrowser' Property='BROWSER' ExeCommand='http://localhost/Development' Return='asyncNoWait' />
+
+    <CustomAction Id="RunMainApp"   
+                  Directory="INSTALLLOCATION"
+          ExeCommand='C:\Windows\system32\inetsrv\appcmd set app "Default Web Site/Development" /enabledProtocols:http,net.pipe,net.tcp'
+          Execute="commit"
+          Return="ignore"/>
+
+    <InstallExecuteSequence>
+      <Custom Action="RunMainApp" Before="InstallFinalize" />
+    </InstallExecuteSequence>
+
+    <UI>
+      <UIRef Id="WixUI_MinimalOverRide" />
+      <Publish Dialog="ExitDialog"
+          Control="Finish"
+          Event="DoAction"
+          Value="LaunchBrowser">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+    </UI>-->
+    <!--<UIRef Id="SetupDialogUI" />-->
+
+    <Binary Id="bgPic" SourceFile="images/bg.bmp"/>
+    <Binary Id="cancelbtn" SourceFile="images/cancelbtn.bmp"/>
+    <Property Id="Cancel">cancelbtn</Property>
+
+    <!--<Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch My Application Name" />-->
+
+    <!--<PropertyRef Id="IISMAJORVERSION"/>
+    <PropertyRef Id="NETFRAMEWORK45"/>
+
+    <Condition Message='This setup requires Microsoft .NET Framework 4.5 package or greater needs to be installed for this installation to continue.'>
+      <![CDATA[Installed OR NETFRAMEWORK45]]>
+    </Condition>
+    <Condition Message="IIS 6 yada uzeri kurulum yapmaniz gerekli.">
+      <![CDATA[Installed OR (IISMAJORVERSION AND (IISMAJORVERSION = "#6" OR IISMAJORVERSION = "#7" OR  IISMAJORVERSION = "#8" OR   IISMAJORVERSION = "#9" OR IISMAJORVERSION = "#10"  ))]]>
+    </Condition>
+
+    <CustomAction Id="DetectMSMQ"
+              Return="check"
+              Execute="immediate"
+              BinaryKey="DetectWindowsServices.CA.dll"
+              DllEntry="DetectMSMQ" />
+
+
+    <CustomAction Id="DetectPipe"
+              Return="check"
+              Execute="immediate"
+              BinaryKey="DetectWindowsServices.CA.dll"
+              DllEntry="DetectPipe" />
+
+    <CustomAction Id="DetectSQLServer"
+             Return="check"
+             Execute="immediate"
+             BinaryKey="DetectWindowsServices.CA.dll"
+             DllEntry="DetectSQLServer" />-->
+
+
+    <!--<InstallExecuteSequence>
+      <Custom Action="DetectPipe" Before="InstallInitialize">NOT Installed</Custom>
+      <Custom Action="DetectMSMQ" Before="InstallInitialize">NOT Installed</Custom>
+      -->
+    <!--<Custom Action="DetectSQLServer" Before="InstallInitialize">NOT Installed</Custom>-->
+    <!--
+    </InstallExecuteSequence>-->
+  </Product>
+  <Fragment>
+
+    <Binary Id="DetectWindowsServices.CA.dll"  src="..\DetectWindowsServices\bin\$(var.Configuration)\DetectWindowsServices.CA.dll" />
+
+    <!--<Component Id="ChangeConfig" Guid="01234567-89AB-CDEF-3210-456789ABCDAB" Directory="INSTALLLOCATION">
+      <File Id="Web.config" Name="Web.config" Vital="yes" KeyPath="yes" Source="SourceDir\Web.config" />
+      <util:XmlFile Id="AppConfigSetConnStr" Action="setValue" Permanent="yes" File="[#Web.config]"
+           ElementPath="/configuration/connectionStrings/add[\[]@name='DeviceDBConnection'[\]]" Name="connectionString"
+           Value="Server=[SERVERNAMEPROP];Database=[DBNAMEPROP];User Id=sa;Password=12345678.ict;" />
+      
+      <util:XmlFile Id="AppConfigSetConnStr2" Action="setValue" Permanent="yes" File="[#Web.config]"
+      ElementPath="/configuration/connectionStrings/add[\[]@name='SiskonEntities'[\]]" Name="connectionString"
+      Value="metadata=res://*/Models.SiskonEntities.csdl|res://*/Models.SiskonEntities.ssdl|res://*/Models.SiskonEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=[SERVERNAMEPROP];initial catalog=[DBNAMEPROP];user id=sa;password=12345678.ict;MultipleActiveResultSets=True;App=EntityFramework&quot;"/>
+
+    </Component>-->
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INETPUB" Name="InetPub" >
+        <Directory Id="WWWROOT" Name="WwwRoot">
+          <Directory Id="INSTALLLOCATION" Name="WebApplication" ComponentGuidGenerationSeed="01234567-89AB-CDEF-0123-456789ABCDEF" >
+
+          </Directory>
+        </Directory>
+      </Directory>
+      <Component Id='SqlComponent.SQLAuthentication' Guid='665D641C-3570-4b96-9CA5-2B4C12594A35' KeyPath='yes'>
+        <Condition><![CDATA[USEINTEGRATEDSECURITY<>1]]></Condition>
+        <sql:SqlDatabase Id='SqlDatabase.SQLAuthentication' Database='[DATABASE_NAME]' User='SQLUser' Server='[DATABASE_SERVER]' CreateOnInstall='yes' DropOnUninstall='yes' ContinueOnError='no' />
+          <sql:SqlScript Id='SqlScriptSQLAuthentication' BinaryKey='SqlScriptSQLAuthentication' SqlDb='SqlDatabase.SQLAuthentication' ExecuteOnInstall='yes' />
+
+      </Component>
+
+      <Component Id='SqlComponent.IntegratedAuthentication' Guid='E5DF48AE-2338-4029-9FDF-8DAA6AD0216D' KeyPath='yes'>
+        <Condition>USEINTEGRATEDSECURITY = 1</Condition>
+        <sql:SqlDatabase Id='SqlDatabase.IntegratedAuthentication' Database='[DATABASE_NAME]' Server='[DATABASE_SERVER]' CreateOnInstall='yes' DropOnUninstall='yes' ContinueOnError='no' />
+        
+         <sql:SqlScript Id='SqlScriptIntegratedAuthentication' BinaryKey='SqlScriptIntegratedAuthentication' SqlDb='SqlDatabase.IntegratedAuthentication' ExecuteOnInstall='yes' />
+
+      </Component>
+    </Directory>
+
+    <!--<DirectoryRef Id="INSTALLLOCATION">
+      <Component Id="ApplicationShortcut" Guid="01234567-89AB-CDEF-0123-456789ABCDAB">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="Development"
+                  Description="Development app"
+                  Target="[WindowsFolder]\explorer.exe"
+                  WorkingDirectory="INSTALLLOCATION"/>
+        <util:InternetShortcut Id="OnlineDocumentationShortcut"
+                        Name="Siskon"
+                               Directory="INSTALLLOCATION"
+                               Target="http://localhost/Development"/>
+        <RemoveFolder Id="INSTALLLOCATION" On="uninstall"/>
+
+        <RegistryKey Id="RegistryEntry" Root="HKLM"
+             Key="Software\Microsoft\Development"
+             Action="create">
+          <RegistryValue Type="multiString" Name="Develeopmet"
+                         Value="p1" Action="append" />
+        </RegistryKey>
+      </Component>
+
+
+
+    </DirectoryRef>-->
+
+
+  </Fragment>
+</Wix>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension"
+          xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <Fragment>
+    <ComponentGroup Id="IISConfiguration">
+      <ComponentRef Id="ApplicationPool" />
+      <ComponentRef Id="VirtualDirectory" />
+    </ComponentGroup>
+
+    <!-- Install to default web site -->
+    <iis:WebSite Id="DefaultWebSite" Description='Default Web Site' >
+      <iis:WebAddress Id="AllUnassigned" Port="1678" />
+    </iis:WebSite>
+
+
+    <DirectoryRef Id="INSTALLLOCATION">
+      <!-- Creating Application Pool -->
+      <Component Id="ApplicationPool" Guid="{36AC02B0-E6D7-4A76-929C-0287899CBAD2}">
+        <CreateFolder />
+
+        <!--Define application pool-->
+        <iis:WebAppPool Id="AppPool"
+                        Name="[APPNAMEPROP]"
+                        Identity="localSystem"
+                        IdleTimeout="20"
+                        QueueLimit="1000"
+                        MaxWorkerProcesses="1" >
+          <iis:RecycleTime Value="02:00"/>
+        </iis:WebAppPool>
+      </Component>
+
+      <!--Creating Virtual Directory-->
+      <Component Id="VirtualDirectory" Guid="{A46C56A4-39E7-4163-B85B-2E390D94C78A}">
+        <CreateFolder />
+
+        <!--Define Virtual Directory-->
+        <iis:WebVirtualDir Id="Application_VirtualDir"
+                           Alias="[APPNAMEPROP]"
+                           Directory="INSTALLLOCATION"
+                           WebSite="DefaultWebSite" >
+
+          <!-- Configuring web application to use application pool -->
+          <iis:WebApplication Id="Development"
+                              Name="[APPNAMEPROP]"
+                              Isolation="medium"
+                              WebAppPool="AppPool"
+                              AllowSessions ="yes"
+                              SessionTimeout="20"
+                              ParentPaths="no"
+                              Buffer="yes"
+                              ScriptTimeout="90"
+                              ClientDebugging="no"
+                              ServerDebugging="no">
+
+            <iis:WebApplicationExtension Extension="asax" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="ascx" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="asp" CheckPath="yes" Script="yes" Executable="$(env.SystemRoot)\System32\inetsrv\asp.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="aspx" CheckPath="no" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="axd" CheckPath="no" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="browser" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="config" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="cs" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="csproj" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="exclude" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="master" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="resources" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="resx" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="skin" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="svc" CheckPath="no" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="vb" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="vbproj" CheckPath="yes" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+            <iis:WebApplicationExtension Extension="vsdisco" CheckPath="no" Script="yes" Executable="[FRAMEWORKROOT]v4.0.30319\aspnet_isapi.dll" Verbs="GET,HEAD,POST" />
+
+
+          </iis:WebApplication>
+
+
+          <!-- Configuring Web application property -->
+          <iis:WebDirProperties Id="Application_Properties"
+                                AnonymousAccess="yes"
+                                WindowsAuthentication="no"
+                                DefaultDocuments="Index.cshtml"
+                                Read="yes"
+                                LogVisits="yes"
+                                Index="yes"
+                                Execute ="yes"
+                                Script="yes"  />
+
+        </iis:WebVirtualDir>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

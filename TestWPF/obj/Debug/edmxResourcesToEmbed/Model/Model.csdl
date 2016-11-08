@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GpsData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HumanTimestamp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UnixTime" Type="Double" />
+    <Property Name="Microseconds" Type="Double" />
+    <Property Name="SystemFailure" Type="Double" />
+    <Property Name="AccelerometerFailure" Type="Double" />
+    <Property Name="GyroscopeFailure" Type="Double" />
+    <Property Name="MagnetometerFailure" Type="Double" />
+    <Property Name="PressureFailure" Type="Double" />
+    <Property Name="GNSSFailure" Type="Double" />
+    <Property Name="AccelerometerOverrange" Type="Double" />
+    <Property Name="GyroscopeOverrange" Type="Double" />
+    <Property Name="MagnetometerOverrange" Type="Double" />
+    <Property Name="PressureOverrange" Type="Double" />
+    <Property Name="MinimumTemperature" Type="Double" />
+    <Property Name="MaximumTemperature" Type="Double" />
+    <Property Name="LowVoltage" Type="Double" />
+    <Property Name="HighVoltage" Type="Double" />
+    <Property Name="GNSSAntennaDisconnected" Type="Double" />
+    <Property Name="DataOverflow" Type="Double" />
+    <Property Name="OrientationReady" Type="Double" />
+    <Property Name="NavigationReady" Type="Double" />
+    <Property Name="HeadingReady" Type="Double" />
+    <Property Name="TimeReady" Type="Double" />
+    <Property Name="GNSSFixType" Type="Double" />
+    <Property Name="Event1Flag" Type="Double" />
+    <Property Name="Event2Flag" Type="Double" />
+    <Property Name="InternalGNSSEnabled" Type="Double" />
+    <Property Name="DualAntennaHeadingActive" Type="Double" />
+    <Property Name="VelocityHeadingEnabled" Type="Double" />
+    <Property Name="AtmosphericAltitudeEnabled" Type="Double" />
+    <Property Name="ExternalPositionActive" Type="Double" />
+    <Property Name="ExternalVelocityActive" Type="Double" />
+    <Property Name="ExternalHeadingActive" Type="Double" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="Height" Type="Double" />
+    <Property Name="VelocityNorth" Type="Double" />
+    <Property Name="VelocityEast" Type="Double" />
+    <Property Name="VelocityDown" Type="Double" />
+    <Property Name="AccelerationX" Type="Double" />
+    <Property Name="AccelerationY" Type="Double" />
+    <Property Name="AccelerationZ" Type="Double" />
+    <Property Name="GForce" Type="Double" />
+    <Property Name="Roll" Type="Double" />
+    <Property Name="Pitch" Type="Double" />
+    <Property Name="Heading" Type="Double" />
+    <Property Name="AngularVelocityX" Type="Double" />
+    <Property Name="AngularVelocityY" Type="Double" />
+    <Property Name="AngularVelocityZ" Type="Double" />
+    <Property Name="LatitudeError" Type="Double" />
+    <Property Name="LongitudeError" Type="Double" />
+    <Property Name="HeightError" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="OtakEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GpsData" EntityType="Self.GpsData" />
+    <EntitySet Name="GpsDataGenerated" EntityType="Model.GpsDataGenerated" />
+  </EntityContainer>
+  <EntityType Name="GpsDataGenerated">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+  </EntityType>
+</Schema>

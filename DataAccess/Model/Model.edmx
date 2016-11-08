@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GpsData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HumanTimestamp" Type="nvarchar" MaxLength="255" />
+          <Property Name="UnixTime" Type="float" />
+          <Property Name="Microseconds" Type="float" />
+          <Property Name="SystemFailure" Type="float" />
+          <Property Name="AccelerometerFailure" Type="float" />
+          <Property Name="GyroscopeFailure" Type="float" />
+          <Property Name="MagnetometerFailure" Type="float" />
+          <Property Name="PressureFailure" Type="float" />
+          <Property Name="GNSSFailure" Type="float" />
+          <Property Name="AccelerometerOverrange" Type="float" />
+          <Property Name="GyroscopeOverrange" Type="float" />
+          <Property Name="MagnetometerOverrange" Type="float" />
+          <Property Name="PressureOverrange" Type="float" />
+          <Property Name="MinimumTemperature" Type="float" />
+          <Property Name="MaximumTemperature" Type="float" />
+          <Property Name="LowVoltage" Type="float" />
+          <Property Name="HighVoltage" Type="float" />
+          <Property Name="GNSSAntennaDisconnected" Type="float" />
+          <Property Name="DataOverflow" Type="float" />
+          <Property Name="OrientationReady" Type="float" />
+          <Property Name="NavigationReady" Type="float" />
+          <Property Name="HeadingReady" Type="float" />
+          <Property Name="TimeReady" Type="float" />
+          <Property Name="GNSSFixType" Type="float" />
+          <Property Name="Event1Flag" Type="float" />
+          <Property Name="Event2Flag" Type="float" />
+          <Property Name="InternalGNSSEnabled" Type="float" />
+          <Property Name="DualAntennaHeadingActive" Type="float" />
+          <Property Name="VelocityHeadingEnabled" Type="float" />
+          <Property Name="AtmosphericAltitudeEnabled" Type="float" />
+          <Property Name="ExternalPositionActive" Type="float" />
+          <Property Name="ExternalVelocityActive" Type="float" />
+          <Property Name="ExternalHeadingActive" Type="float" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Height" Type="float" />
+          <Property Name="VelocityNorth" Type="float" />
+          <Property Name="VelocityEast" Type="float" />
+          <Property Name="VelocityDown" Type="float" />
+          <Property Name="AccelerationX" Type="float" />
+          <Property Name="AccelerationY" Type="float" />
+          <Property Name="AccelerationZ" Type="float" />
+          <Property Name="GForce" Type="float" />
+          <Property Name="Roll" Type="float" />
+          <Property Name="Pitch" Type="float" />
+          <Property Name="Heading" Type="float" />
+          <Property Name="AngularVelocityX" Type="float" />
+          <Property Name="AngularVelocityY" Type="float" />
+          <Property Name="AngularVelocityZ" Type="float" />
+          <Property Name="LatitudeError" Type="float" />
+          <Property Name="LongitudeError" Type="float" />
+          <Property Name="HeightError" Type="float" />
+        </EntityType>
+        <EntityType Name="GpsDataGenerated">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="GpsData" EntityType="Self.GpsData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GpsDataGenerated" EntityType="Self.GpsDataGenerated" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GpsData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HumanTimestamp" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="UnixTime" Type="Double" />
+          <Property Name="Microseconds" Type="Double" />
+          <Property Name="SystemFailure" Type="Double" />
+          <Property Name="AccelerometerFailure" Type="Double" />
+          <Property Name="GyroscopeFailure" Type="Double" />
+          <Property Name="MagnetometerFailure" Type="Double" />
+          <Property Name="PressureFailure" Type="Double" />
+          <Property Name="GNSSFailure" Type="Double" />
+          <Property Name="AccelerometerOverrange" Type="Double" />
+          <Property Name="GyroscopeOverrange" Type="Double" />
+          <Property Name="MagnetometerOverrange" Type="Double" />
+          <Property Name="PressureOverrange" Type="Double" />
+          <Property Name="MinimumTemperature" Type="Double" />
+          <Property Name="MaximumTemperature" Type="Double" />
+          <Property Name="LowVoltage" Type="Double" />
+          <Property Name="HighVoltage" Type="Double" />
+          <Property Name="GNSSAntennaDisconnected" Type="Double" />
+          <Property Name="DataOverflow" Type="Double" />
+          <Property Name="OrientationReady" Type="Double" />
+          <Property Name="NavigationReady" Type="Double" />
+          <Property Name="HeadingReady" Type="Double" />
+          <Property Name="TimeReady" Type="Double" />
+          <Property Name="GNSSFixType" Type="Double" />
+          <Property Name="Event1Flag" Type="Double" />
+          <Property Name="Event2Flag" Type="Double" />
+          <Property Name="InternalGNSSEnabled" Type="Double" />
+          <Property Name="DualAntennaHeadingActive" Type="Double" />
+          <Property Name="VelocityHeadingEnabled" Type="Double" />
+          <Property Name="AtmosphericAltitudeEnabled" Type="Double" />
+          <Property Name="ExternalPositionActive" Type="Double" />
+          <Property Name="ExternalVelocityActive" Type="Double" />
+          <Property Name="ExternalHeadingActive" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Height" Type="Double" />
+          <Property Name="VelocityNorth" Type="Double" />
+          <Property Name="VelocityEast" Type="Double" />
+          <Property Name="VelocityDown" Type="Double" />
+          <Property Name="AccelerationX" Type="Double" />
+          <Property Name="AccelerationY" Type="Double" />
+          <Property Name="AccelerationZ" Type="Double" />
+          <Property Name="GForce" Type="Double" />
+          <Property Name="Roll" Type="Double" />
+          <Property Name="Pitch" Type="Double" />
+          <Property Name="Heading" Type="Double" />
+          <Property Name="AngularVelocityX" Type="Double" />
+          <Property Name="AngularVelocityY" Type="Double" />
+          <Property Name="AngularVelocityZ" Type="Double" />
+          <Property Name="LatitudeError" Type="Double" />
+          <Property Name="LongitudeError" Type="Double" />
+          <Property Name="HeightError" Type="Double" />
+        </EntityType>
+        <EntityType Name="GpsDataGenerated">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="Longitude" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="OtakEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GpsData" EntityType="Self.GpsData" />
+          <EntitySet Name="GpsDataGenerated" EntityType="Self.GpsDataGenerated" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="OtakEntities">
+          <EntitySetMapping Name="GpsData">
+            <EntityTypeMapping TypeName="Model.GpsData">
+              <MappingFragment StoreEntitySet="GpsData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HumanTimestamp" ColumnName="HumanTimestamp" />
+                <ScalarProperty Name="UnixTime" ColumnName="UnixTime" />
+                <ScalarProperty Name="Microseconds" ColumnName="Microseconds" />
+                <ScalarProperty Name="SystemFailure" ColumnName="SystemFailure" />
+                <ScalarProperty Name="AccelerometerFailure" ColumnName="AccelerometerFailure" />
+                <ScalarProperty Name="GyroscopeFailure" ColumnName="GyroscopeFailure" />
+                <ScalarProperty Name="MagnetometerFailure" ColumnName="MagnetometerFailure" />
+                <ScalarProperty Name="PressureFailure" ColumnName="PressureFailure" />
+                <ScalarProperty Name="GNSSFailure" ColumnName="GNSSFailure" />
+                <ScalarProperty Name="AccelerometerOverrange" ColumnName="AccelerometerOverrange" />
+                <ScalarProperty Name="GyroscopeOverrange" ColumnName="GyroscopeOverrange" />
+                <ScalarProperty Name="MagnetometerOverrange" ColumnName="MagnetometerOverrange" />
+                <ScalarProperty Name="PressureOverrange" ColumnName="PressureOverrange" />
+                <ScalarProperty Name="MinimumTemperature" ColumnName="MinimumTemperature" />
+                <ScalarProperty Name="MaximumTemperature" ColumnName="MaximumTemperature" />
+                <ScalarProperty Name="LowVoltage" ColumnName="LowVoltage" />
+                <ScalarProperty Name="HighVoltage" ColumnName="HighVoltage" />
+                <ScalarProperty Name="GNSSAntennaDisconnected" ColumnName="GNSSAntennaDisconnected" />
+                <ScalarProperty Name="DataOverflow" ColumnName="DataOverflow" />
+                <ScalarProperty Name="OrientationReady" ColumnName="OrientationReady" />
+                <ScalarProperty Name="NavigationReady" ColumnName="NavigationReady" />
+                <ScalarProperty Name="HeadingReady" ColumnName="HeadingReady" />
+                <ScalarProperty Name="TimeReady" ColumnName="TimeReady" />
+                <ScalarProperty Name="GNSSFixType" ColumnName="GNSSFixType" />
+                <ScalarProperty Name="Event1Flag" ColumnName="Event1Flag" />
+                <ScalarProperty Name="Event2Flag" ColumnName="Event2Flag" />
+                <ScalarProperty Name="InternalGNSSEnabled" ColumnName="InternalGNSSEnabled" />
+                <ScalarProperty Name="DualAntennaHeadingActive" ColumnName="DualAntennaHeadingActive" />
+                <ScalarProperty Name="VelocityHeadingEnabled" ColumnName="VelocityHeadingEnabled" />
+                <ScalarProperty Name="AtmosphericAltitudeEnabled" ColumnName="AtmosphericAltitudeEnabled" />
+                <ScalarProperty Name="ExternalPositionActive" ColumnName="ExternalPositionActive" />
+                <ScalarProperty Name="ExternalVelocityActive" ColumnName="ExternalVelocityActive" />
+                <ScalarProperty Name="ExternalHeadingActive" ColumnName="ExternalHeadingActive" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="VelocityNorth" ColumnName="VelocityNorth" />
+                <ScalarProperty Name="VelocityEast" ColumnName="VelocityEast" />
+                <ScalarProperty Name="VelocityDown" ColumnName="VelocityDown" />
+                <ScalarProperty Name="AccelerationX" ColumnName="AccelerationX" />
+                <ScalarProperty Name="AccelerationY" ColumnName="AccelerationY" />
+                <ScalarProperty Name="AccelerationZ" ColumnName="AccelerationZ" />
+                <ScalarProperty Name="GForce" ColumnName="GForce" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Pitch" ColumnName="Pitch" />
+                <ScalarProperty Name="Heading" ColumnName="Heading" />
+                <ScalarProperty Name="AngularVelocityX" ColumnName="AngularVelocityX" />
+                <ScalarProperty Name="AngularVelocityY" ColumnName="AngularVelocityY" />
+                <ScalarProperty Name="AngularVelocityZ" ColumnName="AngularVelocityZ" />
+                <ScalarProperty Name="LatitudeError" ColumnName="LatitudeError" />
+                <ScalarProperty Name="LongitudeError" ColumnName="LongitudeError" />
+                <ScalarProperty Name="HeightError" ColumnName="HeightError" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GpsDataGenerated">
+            <EntityTypeMapping TypeName="Model.GpsDataGenerated">
+              <MappingFragment StoreEntitySet="GpsDataGenerated">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

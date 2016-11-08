@@ -1,0 +1,14 @@
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\bin\Debug\NullWpfApp.exe.config
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\bin\Debug\NullWpfApp.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\bin\Debug\NullWpfApp.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\MainWindow.g.cs
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\App.g.cs
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp_MarkupCompile.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp_MarkupCompile.lref
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\MainWindow.baml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp.g.resources
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp.Properties.Resources.resources
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp.csproj.GenerateResource.Cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp.exe
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\NullWpfApp\obj\Debug\NullWpfApp.pdb

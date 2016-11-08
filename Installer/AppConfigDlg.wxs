@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (c) Microsoft Corporation.  All rights reserved.
+    
+    The use and distribution terms for this software are covered by the
+    Common Public License 1.0 (http://opensource.org/licenses/cpl1.0.php)
+    which can be found in the file CPL.TXT at the root of this distribution.
+    By using this software in any fashion, you are agreeing to be bound by
+    the terms of this license.
+    
+    You must not remove this notice, or any other, from this software.
+-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <Property  Id="SERVERNAMEPROP" Secure="yes" Value="Localhost"/>
+    <Property  Id="DBNAMEPROP" Secure="yes"  Value="Device"/>
+    <Property  Id="APPNAMEPROP" Secure="yes"  Value="Appliaction Name"/>
+
+    <Property  Id="BgProp" >Bg</Property>
+    <Binary Id="Bg" SourceFile="Binary/dlgbmp.bmp"></Binary>
+ 
+    <Property Id="INPUTNOTVALIDMESSAGE" />
+
+    <Binary Id="Exclam.ico" SourceFile="Images/Exclam.ico" />
+    <UI>
+      <TextStyle Id="TahomaHeader" FaceName="Tahoma" Size="18" Bold="yes" />
+      <TextStyle Id="TahomaNormal" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="UserInput" FaceName="Tahoma" Size="8" Red="88" Green="184" Blue="202"/>
+      
+      <Dialog Id="AppConfigDlg" Width="370" Height="270" Title="!(loc.DbSettingsDlgTitle)">
+
+        <Control Id="serverNameLabel" Type="Text" X="140" Y="100" Height="17" Width="65"  Text="!(loc.ServerName)"  />
+        <Control Id="serverNameTextbox" Type="Edit" X="210" Y="100"  Height="17" Width="120" Property="SERVERNAMEPROP" />
+
+        <Control Id="dbNameLabel" Type="Text" X="140" Y="120" Height="17" Width="65"  Text="!(loc.DatabaseName)" />
+        <Control Id="dbNameTextbox" Type="Edit" X="210" Y="120"  Height="17" Width="120" Property="DBNAMEPROP"  />
+
+        <Control Id="appNameLabel" Type="Text" X="140" Y="140" Height="17" Width="65"  Text="!(loc.ApplicationName)" />
+        <Control Id="appNameTextbox" Type="Edit" X="210" Y="140"  Height="17" Width="120" Property="APPNAMEPROP"/>
+
+        <Control Id="Next" Type="PushButton" X="220" Y="243" Width="56" Height="17"  Text="!(loc.WixUINext)">
+
+          <Publish Event="NewDialog" Value="VerifyReadyDlgOverRide">1</Publish>
+       
+        </Control>
+        <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+          <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+        </Control>
+        <!--<Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="234" TabSkip="no" Text="!(loc.ResumeDlgBitmap)" />-->
+        <Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="122" Height="234" TabSkip="no" Text="[BgProp]" />
+        
+        <Control Id="Back" Type="PushButton" X="156" Y="243" Width="56" Height="17"  Text="!(loc.WixUIBack)" >
+          <Publish Event="NewDialog" Value="WelcomeDlgOverRide">1</Publish>
+        </Control>
+        <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+        <Control Id="Description" Type="Text" X="135" Y="30" Width="220" Height="60" Transparent="yes" NoPrefix="yes" Text="!(loc.DbSettinsDescription)" />
+        <Control Id="Title" Type="Text" X="135" Y="10" Width="220" Height="60" Transparent="yes" NoPrefix="yes" Text="!(loc.DbSettingsPageTitle)" />
+      </Dialog>
+
+
+      <Dialog Id="InputNotValidDialog" Width="260" Height="85" Title="[ProductName] Setup" NoMinimize="yes">
+        <Control Id="Icon" Type="Icon" X="15" Y="15" Width="24" Height="24" ToolTip="Information icon" FixedSize="yes" IconSize="32" Text="Exclam.ico" />
+        <Control Id="Return" Type="PushButton" X="100" Y="57" Width="56" Height="17" Default="yes" Cancel="yes" Text="Tamam">
+          <Publish Event="EndDialog" Value="Return">1</Publish>
+        </Control>
+        <Control Id="Text" Type="Text" X="48" Y="15" Width="194" Height="30" TabSkip="no" Text="[INPUTNOTVALIDMESSAGE]">
+        </Control>
+      </Dialog>
+
+      <InstallUISequence>
+        <Show Dialog="AppConfigDlg" Before="ProgressDlg" Overridable="yes">Installed AND (RESUME OR Preselected)</Show>
+      </InstallUISequence>
+    </UI>
+  </Fragment>
+</Wix>

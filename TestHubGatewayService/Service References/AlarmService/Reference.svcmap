@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="65420702-83e6-46b1-8494-ba40f57705f4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AlarmNotificationService.xsd" MetadataType="Schema" ID="20c07c6a-7230-45e8-88f6-0ec574ecaa14" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd6" />
+    <MetadataFile FileName="AlarmNotificationService1.xsd" MetadataType="Schema" ID="c2fbb6e5-f9a5-4466-a9d9-7444dd5b4df4" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AlarmNotificationService2.xsd" MetadataType="Schema" ID="e811cf2c-4627-4034-834d-3f787c82f5e6" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd7" />
+    <MetadataFile FileName="AlarmNotificationService.wsdl" MetadataType="Wsdl" ID="f57d5698-2fbf-4a36-a44f-6adfb66f2edc" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?wsdl" />
+    <MetadataFile FileName="AlarmNotificationService3.xsd" MetadataType="Schema" ID="cf723d81-cc8d-4c3d-9ea3-f4778637c8a3" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AlarmNotificationService4.xsd" MetadataType="Schema" ID="1e15007e-c7e4-4f1b-83ae-8ceb39f9a31c" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AlarmNotificationService1.wsdl" MetadataType="Wsdl" ID="ec12bd2e-3fab-48f6-b161-8015fa4aa969" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?wsdl=wsdl2" />
+    <MetadataFile FileName="AlarmNotificationService.disco" MetadataType="Disco" ID="df146afc-d707-4f6e-8038-3a1af7d98f74" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?disco" />
+    <MetadataFile FileName="AlarmNotificationService2.wsdl" MetadataType="Wsdl" ID="41602f05-a282-4830-b65d-b2a225ebed65" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AlarmNotificationService3.wsdl" MetadataType="Wsdl" ID="a6d80f6c-b83b-4df1-b3f1-025b2b92aeec" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="AlarmNotificationService5.xsd" MetadataType="Schema" ID="16af0fea-e60c-4a5d-9a51-d8d3cc7614b4" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AlarmNotificationService6.xsd" MetadataType="Schema" ID="e0b9fdce-c454-4eb7-89b5-257273829b05" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AlarmNotificationService7.xsd" MetadataType="Schema" ID="c0e5fc2e-ca10-4bd6-90c5-234b6a879b64" SourceId="1" SourceUrl="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,20 @@
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\bin\Debug\ZoomAndPan.dll
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\bin\Debug\ZoomAndPan.pdb
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\ZoomAndPan.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\ZoomAndPan_MarkupCompile.cache
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\ZoomAndPan_MarkupCompile.lref
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\Themes\Generic.baml
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\ZoomAndPan.g.resources
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\ZoomAndPan.dll
+C:\Users\serhat.ersoy\Desktop\wpf\zoom\UpdatedSimpleZoomAndPanSample\SimpleZoomAndPanSample\ZoomAndPan\obj\Debug\ZoomAndPan.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\bin\Debug\ZoomAndPan.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\bin\Debug\ZoomAndPan.pdb
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan_MarkupCompile.cache
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan_MarkupCompile.lref
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\Themes\Generic.baml
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan.g.resources
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan.dll
+C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan.pdb

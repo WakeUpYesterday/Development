@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="AlarmNotificationServiceNamespace" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="AlarmNotificationServiceNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="AlarmNotificationServiceNamespace/Imports">
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd0" namespace="AlarmNotificationServiceNamespace" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Siskon.Alarm.Domain.Model.HubInterfaces.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AlarmNotificationService_PublishAlarmOccurred_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishAlarmOccurred" />
+  </wsdl:message>
+  <wsdl:message name="AlarmNotificationService_PublishAlarmOccurred_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishAlarmOccurredResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlarmNotificationService_PublishAlarmCleared_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishAlarmCleared" />
+  </wsdl:message>
+  <wsdl:message name="AlarmNotificationService_PublishAlarmCleared_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishAlarmClearedResponse" />
+  </wsdl:message>
+  <wsdl:message name="AlarmNotificationService_PublishAlarmUpdated_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishAlarmUpdated" />
+  </wsdl:message>
+  <wsdl:message name="AlarmNotificationService_PublishAlarmUpdated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishAlarmUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AlarmNotificationService">
+    <wsdl:operation name="PublishAlarmOccurred">
+      <wsdl:input wsaw:Action="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmOccurred" message="tns:AlarmNotificationService_PublishAlarmOccurred_InputMessage" />
+      <wsdl:output wsaw:Action="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmOccurredResponse" message="tns:AlarmNotificationService_PublishAlarmOccurred_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishAlarmCleared">
+      <wsdl:input wsaw:Action="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmCleared" message="tns:AlarmNotificationService_PublishAlarmCleared_InputMessage" />
+      <wsdl:output wsaw:Action="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmClearedResponse" message="tns:AlarmNotificationService_PublishAlarmCleared_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishAlarmUpdated">
+      <wsdl:input wsaw:Action="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmUpdated" message="tns:AlarmNotificationService_PublishAlarmUpdated_InputMessage" />
+      <wsdl:output wsaw:Action="AlarmNotificationServiceNamespace/AlarmNotificationService/PublishAlarmUpdatedResponse" message="tns:AlarmNotificationService_PublishAlarmUpdated_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

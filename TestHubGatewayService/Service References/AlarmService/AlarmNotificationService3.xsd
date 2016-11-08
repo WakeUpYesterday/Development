@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="CardMonitoringNotificationServiceNamespace" elementFormDefault="qualified" targetNamespace="CardMonitoringNotificationServiceNamespace" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Siskon.HubGatewayService/AlarmNotificationService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" />
+  <xs:element name="PublishPhysicalLayerDown">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" minOccurs="0" name="physicalLayerEventDto" nillable="true" type="q1:PhysicalLayerEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishPhysicalLayerDownResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishPhysicalLayerUp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" minOccurs="0" name="physicalLayerEventDto" nillable="true" type="q2:PhysicalLayerEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishPhysicalLayerUpResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishLinkLayerDown">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" minOccurs="0" name="linkLayerEventDto" nillable="true" type="q3:LinkLayerEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishLinkLayerDownResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishLinkLayerUp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" minOccurs="0" name="linkLayerEventDto" nillable="true" type="q4:LinkLayerEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishLinkLayerUpResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishPvcDown">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" minOccurs="0" name="pvcEventDto" nillable="true" type="q5:PvcEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishPvcDownResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishPvcUp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TasmusNetasSwitch.Domain.Model.CardMonitoring.CardMonitoringHubInterfaces.DTO" minOccurs="0" name="pvcEventDto" nillable="true" type="q6:PvcEventDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishPvcUpResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
