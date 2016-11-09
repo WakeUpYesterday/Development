@@ -40,10 +40,12 @@ namespace DevConsoleApp2
 
         private static void FillLatLngList()
         {
-            LatLngList.Add(new LatLng(39.871823, 32.746333));
-            LatLngList.Add(new LatLng(39.869527, 32.746295));
-            LatLngList.Add(new LatLng(39.869556, 32.744400));
-            LatLngList.Add(new LatLng(39.871662, 32.744189));
+
+            LatLngList.Add(new LatLng(39.605021, 32.676067)); // Güney alt
+            LatLngList.Add(new LatLng(39.605707, 32.676464)); // Güney üst
+            LatLngList.Add(new LatLng(39.606930, 32.673020)); // Kuzey üst
+            LatLngList.Add(new LatLng(39.606277, 32.672591)); // Kuzey alt 
+          
         }
 
         public static void SetDetailLatLonList()
@@ -99,8 +101,6 @@ namespace DevConsoleApp2
                         db.SaveChanges();
                     }
                     Console.WriteLine("Db Save Changes Suuccessfully...");
-
-
                 }
             }
             catch (Exception ex)

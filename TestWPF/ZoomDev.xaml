@@ -10,7 +10,8 @@
 
 
     <Grid>
-        <ScrollViewer
+        <ScrollViewer 
+        Visibility="Hidden"
         x:Name="scroller"
         CanContentScroll="True"
         VerticalScrollBarVisibility="Visible"
@@ -35,27 +36,30 @@
             This Canvas is the content that is displayed by the ZoomAndPanControl.
             Width and Height determine the size of the content.
             -->
-                <Canvas
-                    RenderOptions.BitmapScalingMode="Fant"
+          
+
+            </ZoomAndPan:ZoomAndPanControl>
+
+        </ScrollViewer>
+        <Canvas
+                RenderOptions.BitmapScalingMode="Fant"
                 x:Name="content"
-                Width="1024"
-                Height="768"
+                Width="921"
+                Height="691"
                 Background="Green"
+                
                 >
-                    <!--<Line X1='300'
+            <!--<Line X1='300'
           X2='700'
           Y1='250'
           Y2='490'
           Stroke="Black"
           StrokeThickness='2' Name="lineT"/>-->
-                </Canvas>
-
-            </ZoomAndPan:ZoomAndPanControl>
-
-        </ScrollViewer>
+        </Canvas>
         <Button Name="Start" Content="Start" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="30" Click="Start_Click">
 
         </Button>
-        <Button x:Name="Zoommo" Content="Zoom" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="30" Click="Zoom_Click" Margin="0,0,56,0"/>
+        <Button x:Name="ZoomOutEx" Content="ZoomOut" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="50" Click="ZoomOutEx_Click" Margin="0,0,56,0"/>
+        <Button x:Name="ZoomInEx" Content="ZoomIn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="50" Click="ZoomInEx_Click" Margin="0,0,120,0"/>
     </Grid>
 </Window>

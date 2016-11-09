@@ -8,3 +8,13 @@ C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DataAcce
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\obj\Debug\DataAccess.pdb

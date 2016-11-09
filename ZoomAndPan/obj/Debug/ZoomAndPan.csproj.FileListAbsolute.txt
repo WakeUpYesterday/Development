@@ -18,3 +18,13 @@ C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndP
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan.g.resources
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan.dll
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\ZoomAndPan\obj\Debug\ZoomAndPan.pdb
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\bin\Debug\ZoomAndPan.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\bin\Debug\ZoomAndPan.pdb
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\ZoomAndPan.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\ZoomAndPan_MarkupCompile.cache
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\ZoomAndPan_MarkupCompile.lref
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\Themes\Generic.baml
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\ZoomAndPan.g.resources
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\ZoomAndPan.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\ZoomAndPan\obj\Debug\ZoomAndPan.pdb

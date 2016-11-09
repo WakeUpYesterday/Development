@@ -29,3 +29,34 @@ C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConso
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp\obj\Debug\DevConsoleApp.csproj.GenerateResource.Cache
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp\obj\Debug\DevConsoleApp.exe
 C:\Users\serhat.ersoy\Documents\Visual Studio 2015\Projects\Development\DevConsoleApp\obj\Debug\DevConsoleApp.pdb
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\DevConsoleApp.exe.config
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\DevConsoleApp.exe
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\DevConsoleApp.pdb
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.Dism.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.ManagedConnections.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.Management.Collector.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.Management.Utility.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.WMIDRTask.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.WmiEnum.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.Win32Ex.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.ManagedDTS.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.SString.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.SqlWmiManagement.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.PipelineHost.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.SqlServer.DTSPipelineWrap.dll
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.Dism.xml
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\bin\Debug\Microsoft.Win32Ex.xml
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\obj\Debug\DevConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\obj\Debug\DevConsoleApp.DBSelector.resources
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\obj\Debug\DevConsoleApp.csproj.GenerateResource.Cache
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\obj\Debug\DevConsoleApp.exe
+C:\Users\serhat.ersoy\Source\Repos\Development\DevConsoleApp\obj\Debug\DevConsoleApp.pdb

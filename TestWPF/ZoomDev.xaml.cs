@@ -23,13 +23,13 @@ namespace TestWPF
     public partial class ZoomDev : Window
     {
 
-      
-
-        private int HeightLimit = 0;
-        private int WidthLimit = 0;
-
+        private bool ButtonDownIsCalled = false;
+        private bool ButtonUpIsCalled = false;
+        private bool ButtonLeftIsCalled = false;
+        private bool ButtonRightIsCalled = false;
+        private bool ZoomFlag = false;
         private int i = 0;
-        private double Zoom = 0.000005;
+        private double Zoom = 0.000001;
 
         private double SZoom = 1;
         private DispatcherTimer drawingTimer;
@@ -37,12 +37,12 @@ namespace TestWPF
         private double CurrentX, CurrentY;
         private double CurrentLng, CurrentLat;
 
-        private double Edge = 0;
+        private double Edge = 50;
 
         private double DeferedY = 0;
         private double DeferedX = 0;
 
-        private Polygon Polygon;
+        private Polygon myPolygon;
 
         private Path Path;
 
@@ -55,9 +55,12 @@ namespace TestWPF
         double LastLinesDegree { set; get; }
         double CurrentSlope { set; get; }
         double RecentlySlope { set; get; }
-        
+
         private int currIndex = 0;
+
         private List<PointLatLon> PointLatLonList = new List<PointLatLon>();
+
+        private List<PointLatLon> RecentlyPointLatLonList = new List<PointLatLon>();
 
         /// <summary>
         /// Specifies the current state of the mouse handling logic.
@@ -83,8 +86,30 @@ namespace TestWPF
             InitializeComponent();
             SetTimer();
             SetPointLatLonList();
+            SetPolygon();
 
             Console.WriteLine(zoomAndPanControl.ContentScale);
+        }
+
+        private void SetPolygon()
+        {
+            myPolygon = new Polygon();
+            myPolygon.Stroke = System.Windows.Media.Brushes.Black;
+            myPolygon.Fill = System.Windows.Media.Brushes.LightSeaGreen;
+            myPolygon.StrokeThickness = 2;
+            myPolygon.HorizontalAlignment = HorizontalAlignment.Left;
+            myPolygon.VerticalAlignment = VerticalAlignment.Center;
+            System.Windows.Point Point1 = new System.Windows.Point(1, 50);
+            System.Windows.Point Point2 = new System.Windows.Point(10, 80);
+            System.Windows.Point Point3 = new System.Windows.Point(50, 50);
+            PointCollection myPointCollection = new PointCollection();
+            myPointCollection.Add(Point1);
+            myPointCollection.Add(Point2);
+            myPointCollection.Add(Point3);
+            myPolygon.Points = myPointCollection;
+
+            // this.content.Children.Add(myPolygon);
+
         }
 
         /// <summary>
@@ -317,7 +342,7 @@ namespace TestWPF
         private void CheckEdges(Point p)
         {
             if (p.Y + this.DeferedY >= this.content.Height - this.Edge)
-            {                
+            {
                 BtnUp_OnClick(new object(), new RoutedEventArgs());
             }
             if (p.Y + this.DeferedY <= this.Edge)
@@ -326,16 +351,18 @@ namespace TestWPF
             }
             if (p.X + this.DeferedX >= this.content.Width - this.Edge)
             {
-               BtnLeft_OnClick(new object(), new RoutedEventArgs());
+                BtnLeft_OnClick(new object(), new RoutedEventArgs());
             }
             if (p.X + this.DeferedX <= this.Edge)
             {
                 BtnRight_OnClick(new object(), new RoutedEventArgs());
+
             }
         }
 
         private void drawingTimer_Tick(object sender, EventArgs e)
         {
+
             this.currIndex++;
 
             if (this.currIndex == this.PointLatLonList.Count)
@@ -344,12 +371,12 @@ namespace TestWPF
                 this.currIndex = 0;
                 return;
             }
-
-            double yMinus = (PointLatLonList[currIndex].Latitude.Value - CurrentLat) / Zoom;
-            double xMinus = (PointLatLonList[currIndex].Longitude.Value - CurrentLng) / Zoom;
+            RecentlyPointLatLonList.Add(PointLatLonList[currIndex]);
+            double yMinus = (PointLatLonList[currIndex].Latitude.Value - CurrentLat) / (Zoom);
+            double xMinus = (PointLatLonList[currIndex].Longitude.Value - CurrentLng) / (Zoom);
 
             //y de ki değişim ters olduğu için çıkarma işlemi yapıldı.
-            Lining(new Point(this.CurrentX, this.CurrentY), new Point(this.CurrentX += xMinus, this.CurrentY -= yMinus));
+            Lining(new Point(this.CurrentX, this.CurrentY), new Point(this.CurrentX += xMinus, this.CurrentY -= yMinus),Brushes.Yellow);
 
             this.CurrentLat = PointLatLonList[currIndex].Latitude.Value;
             this.CurrentLng = PointLatLonList[currIndex].Longitude.Value;
@@ -359,7 +386,12 @@ namespace TestWPF
         {
             this.DeferedY -= 2;
             foreach (var item in this.content.Children.OfType<Line>())
-            {   
+            {
+                if (item.Y1 <= this.Edge)
+                {
+                    ZoomExOut();
+                    break;
+                }
                 item.Y1 -= 2;
                 item.Y2 -= 2;
             }
@@ -369,8 +401,12 @@ namespace TestWPF
         {
             this.DeferedX -= 2;
             foreach (var item in this.content.Children.OfType<Line>())
-            {              
-
+            {
+                if (item.X1 <= this.Edge)
+                {
+                    ZoomExOut();
+                    break;
+                }
                 item.X1 -= 2;
                 item.X2 -= 2;
             }
@@ -382,7 +418,12 @@ namespace TestWPF
             this.DeferedY += 2;
             foreach (var item in this.content.Children.OfType<Line>())
             {
-               
+                if (item.Y2 >= this.content.Height - this.Edge)
+                {
+                    ZoomExOut();
+                    break;
+                }
+
                 item.Y1 += 2;
                 item.Y2 += 2;
             }
@@ -393,7 +434,13 @@ namespace TestWPF
         {
             this.DeferedX += 2;
             foreach (var item in this.content.Children.OfType<Line>())
-            {             
+            {
+                if (item.X2 >= this.content.Width - this.Edge)
+                {
+                    ZoomExOut();
+                    break;
+                }
+
                 item.X1 += 2;
                 item.X2 += 2;
             }
@@ -407,9 +454,12 @@ namespace TestWPF
                 CurrentLng = PointLatLonList[0].Longitude.Value;
                 CurrentLat = PointLatLonList[0].Latitude.Value;
 
-                this.CurrentX = this.content.Width / 4*3;
+                RecentlyPointLatLonList.Add(PointLatLonList[0]);
+
+
+                this.CurrentX = this.content.Width / 2;
                 //this.CurrentY = 10;
-                this.CurrentY = this.content.Height / 3*2;
+                this.CurrentY = this.content.Height / 2;
 
             }
             catch (Exception ex)
@@ -424,45 +474,80 @@ namespace TestWPF
             if (!this.drawingTimer.IsEnabled)
                 this.drawingTimer.Start();
         }
-
-        private void Zoom_Click(object sender, RoutedEventArgs e)
+        
+        private void ReDrawLines()
         {
-            //Point locationFromScreen = lineT.PointToScreen(new Point(0, 0));
-            //MessageBox.Show(locationFromScreen.ToString());
+            double cx = this.content.Width / 2;
+            double cy= this.content.Height / 2;
 
-            //var lines = this.content.Children.OfType<Line>().ToList();
-            //SZoom *= 0.9;
-
-            //foreach (var item in lines)
-            //{
-            //    item.X1 *= 0.9;
-            //    item.Y1 *= 0.9;
-            //    item.X2 *= 0.9;
-            //    item.Y2 *= 0.9;
-            //}
+  
+            double yMinus = 0;
+            double xMinus = 0;
            
+            for(int i = 0; i < RecentlyPointLatLonList.Count - 1; i++)
+            {
+                 yMinus = (RecentlyPointLatLonList[i+1].Latitude.Value - RecentlyPointLatLonList[i].Latitude.Value) / (Zoom);
+                 xMinus = (RecentlyPointLatLonList[i+1].Longitude.Value - RecentlyPointLatLonList[i].Longitude.Value) / (Zoom);
+                 Lining(new Point(cx, cy), new Point(cx += xMinus, cy -= yMinus), Brushes.Red);
+
+                Console.WriteLine(cx +","+ cy);
+            }
+            //this.currIndex = RecentlyPointLatLonList.Count - 1;    
+            this.CurrentX = cx;
+            this.CurrentY = cy;
+        
+        }
+
+        private void ClearLines()
+        {
+
+            ZoomFlag = true;
+            this.content.Children.Clear();
+           
+        }
+
+        private void ZoomExOut()
+        {      
+            drawingTimer.IsEnabled = false;
+            ClearLines();
+            Zoom += 0.000001;
+            ReDrawLines();
+            System.Threading.Thread.Sleep(1000);
+            drawingTimer.IsEnabled = true;
+        }
+
+        private void ZoomOutEx_Click(object sender, RoutedEventArgs e)
+        {
+            ZoomExOut();
+        }
+
+        private void ZoomInEx_Click(object sender, RoutedEventArgs e)
+        {
+            ClearLines();
+            Zoom -= 0.000001;
+            ReDrawLines();
         }
 
         public void SetTimer()
         {
             drawingTimer = new DispatcherTimer();
             this.drawingTimer.Tick += new EventHandler(drawingTimer_Tick);
-            this.drawingTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            this.drawingTimer.Interval = new TimeSpan(0, 0, 0, 0, 10);
         }
 
-        public void Lining(Point p1, Point p2)
+        public void Lining(Point p1, Point p2,SolidColorBrush b)
         {
             this.CheckEdges(p2);
 
             Line line = new Line();
 
-            line.Stroke = Brushes.Yellow;
+            line.Stroke = b;
             line.StrokeThickness = 4;
 
-            line.X1 = (Math.Floor(Math.Floor(p1.X))) * SZoom + this.DeferedX;
-            line.Y1 = (Math.Floor(Math.Floor(p1.Y)) )* SZoom + this.DeferedY;
-            line.X2 = (Math.Floor(Math.Floor(p2.X)) ) * SZoom+ this.DeferedX;
-            line.Y2 = (Math.Floor(Math.Floor(p2.Y)) ) * SZoom+ this.DeferedY;           
+            line.X1 = (Math.Floor(Math.Floor(p1.X))) + this.DeferedX;
+            line.Y1 = (Math.Floor(Math.Floor(p1.Y))) + this.DeferedY;
+            line.X2 = (Math.Floor(Math.Floor(p2.X))) + this.DeferedX;
+            line.Y2 = (Math.Floor(Math.Floor(p2.Y))) + this.DeferedY;
 
             content.Children.Add(line);
         }
