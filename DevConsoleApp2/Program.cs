@@ -40,14 +40,19 @@ namespace DevConsoleApp2
 
         private static void FillLatLngList()
         {
+            LatLngList.Add(new LatLng(39.887249, 32.688219));
+            LatLngList.Add(new LatLng(39.894624, 32.716801));
+            LatLngList.Add(new LatLng(39.882441, 32.693369));
+            LatLngList.Add(new LatLng(39.859714, 32.767355));
+            LatLngList.Add(new LatLng(39.829525, 32.697598)); 
 
-            LatLngList.Add(new LatLng(39.605021, 32.676067)); // Güney alt
+        }
+        /*  Haymana
+         *  LatLngList.Add(new LatLng(39.605021, 32.676067)); // Güney alt
             LatLngList.Add(new LatLng(39.605707, 32.676464)); // Güney üst
             LatLngList.Add(new LatLng(39.606930, 32.673020)); // Kuzey üst
             LatLngList.Add(new LatLng(39.606277, 32.672591)); // Kuzey alt 
-          
-        }
-
+         */
         public static void SetDetailLatLonList()
         {
             for (int i = 0; i < LatLngList.Count; i++)

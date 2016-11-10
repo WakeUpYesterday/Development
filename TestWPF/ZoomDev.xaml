@@ -9,57 +9,22 @@
         Title="ZoomDev" Height="768" Width="1024">
 
 
-    <Grid>
-        <ScrollViewer 
-        Visibility="Hidden"
-        x:Name="scroller"
-        CanContentScroll="True"
-        VerticalScrollBarVisibility="Visible"
-        HorizontalScrollBarVisibility="Visible"
-        Background="Green"
-        >
-
-            <!--
-        This is the control that handles zooming and panning.
-        -->
-            <ZoomAndPan:ZoomAndPanControl                
-            x:Name="zoomAndPanControl"
-            Background="Green"
-            MouseDown="zoomAndPanControl_MouseDown"
-            MouseUp="zoomAndPanControl_MouseUp"
-            MouseMove="zoomAndPanControl_MouseMove"
-            MouseWheel="zoomAndPanControl_MouseWheel"
-        
-            >
-
-                <!--
-            This Canvas is the content that is displayed by the ZoomAndPanControl.
-            Width and Height determine the size of the content.
-            -->
-          
-
-            </ZoomAndPan:ZoomAndPanControl>
-
-        </ScrollViewer>
+    <Grid>     
         <Canvas
                 RenderOptions.BitmapScalingMode="Fant"
                 x:Name="content"
-                Width="921"
-                Height="691"
-                Background="Green"
-                
-                >
-            <!--<Line X1='300'
-          X2='700'
-          Y1='250'
-          Y2='490'
-          Stroke="Black"
-          StrokeThickness='2' Name="lineT"/>-->
+                Width="1024"
+                Height="768"
+                Background="Green"      
+               HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+                >       
         </Canvas>
         <Button Name="Start" Content="Start" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="30" Click="Start_Click">
 
         </Button>
         <Button x:Name="ZoomOutEx" Content="ZoomOut" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="50" Click="ZoomOutEx_Click" Margin="0,0,56,0"/>
         <Button x:Name="ZoomInEx" Content="ZoomIn" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="50" Click="ZoomInEx_Click" Margin="0,0,120,0"/>
+        <Button x:Name="Pause" Content="Pause" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="50" Click="Pause_Click" Margin="0,0,175,0" RenderTransformOrigin="-0.86,0.525"/>
     </Grid>
 </Window>

@@ -15,6 +15,5 @@ C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramew
 C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\serhat.ersoy\Source\Repos\Development\DataAccess\obj\Debug\DataAccess.pdb
